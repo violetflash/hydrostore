@@ -1,9 +1,6 @@
-html {
-  box-sizing: border-box;
-}
+@import "fonts";
+@import "global";
+@import "vars";
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+
+
