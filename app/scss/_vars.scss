@@ -1,0 +1,40 @@
+@mixin focus {
+  transition: all 0.3s ease;
+  &:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+  }
+}
+
+$accent: #1C62CD;
+
+%sf-regular {
+   font-family: "San-Francisco Pro", sans-serif;
+   font-weight: 400;
+ }
+
+%sf-medium {
+  font-family: "San-Francisco Pro", sans-serif;
+  font-weight: 500;
+}
+
+%sf-semibold {
+  font-family: "San-Francisco Pro", sans-serif;
+  font-weight: 600;
+}
+
+%sf-bold {
+  font-family: "San-Francisco Pro", sans-serif;
+  font-weight: 700;
+}
+
+%barlow-bold {
+  font-family: Barlow, sans-serif;
+  font-weight: 700;
+}
+
+%proxima-bold {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+}
+
