@@ -89,41 +89,124 @@
   }
 
   &__bottom {
-    background-color:  #F0F0F4;
-    padding: 15px 0;
+    overflow: hidden;
+    margin-bottom: 78px;
   }
 
   &__category-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #F0F0F4;
+    min-height: 53px;
   }
 
   &__category-item {
-    text-transform: capitalize;
-    @extend %sf-regular;
-    font-size: 20px;
-    line-height: 24px;
-
+    
   }
 
   &__category-link {
+    overflow: hidden;
+    text-transform: capitalize;
+    font-size: 20px;
     position: relative;
+    padding: 15px 20px;
+    //margin: 0 10px;
+    z-index: 2;
     @include focus;
-    &:hover {
-      font-weight: 600;
-      &::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: $accent;
-        bottom: -18px;
-      }
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      bottom: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0;
+      background-color: #fff;
+      transition: all .5s;
+      border-bottom: 3px solid $accent;
     }
 
+    &:hover {
+      color: #000;
+      &::before {
+        opacity: 1;
+        bottom: 0;
+      }
+    }
+  }
+}
 
+
+/* PROMO-SECTION START */
+.promo-section {
+  &__inner {
+    display: flex;
+  }
+  &__slider {
+    max-width: 870px;
+    margin-right: 36px;
+    position: relative;
   }
 
+  &__arrow {
+    border: none;
+    background-color: transparent;
+    @include focus;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 23px;
+
+    &--right {
+      right: 23px;
+      left: unset;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 40px;
+    max-width: 111px;
+    width: 100%;
+    li {
+      & + & {
+        margin-left: 9px;
+      }
+    }
+    li button {
+      background-color: transparent;
+      //width: 11px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      font-size: 0;
+      @include focus;
+      cursor: pointer;
+    }
+  }
+  
+  .slick-active {
+    button {
+      background-color: #fff !important;
+
+    }
+  }
+
+
+  &__banner {
+    max-width: 265px;
+    width: 100%;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
 }
 
 
