@@ -159,6 +159,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 23px;
+    cursor: pointer;
 
     &--right {
       right: 23px;
@@ -206,6 +207,50 @@
     border: 1px solid #CDCDCD;
     box-sizing: border-box;
     border-radius: 3px;
+  }
+
+  &__banner-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__name {
+    padding: 8px 20px;
+    background-color: $accent;
+    color: #fff;
+    text-align: center;
+    max-width: 90px;
+    height: 100%;
+  }
+
+  &__price-new {
+    font-size: 27px;
+    line-height: 32px;
+    color: $accent;
+    @extend %barlow-bold;
+  }
+
+  &__banner-info {
+    font-size: 18px;
+    line-height: 21px;
+    @extend %sf-bold;
+    text-align: center;
+  }
+
+  &__banner-bottom {
+    background: #F0F0F4;
+    border-radius: 3px;
+    text-align: center;
+    padding: 26px 10px;
+  }
+
+  &__highlight {
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    @extend %barlow-bold;
+    color: $accent;
+    margin-top: 8px;
   }
 }
 
