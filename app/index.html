@@ -41,7 +41,7 @@
         <ul class="header__category-list">
           <li class="header__category-item"><a class="header__category-link" href="#">Квадроциклы</a></li>
           <li class="header__category-item"><a class="header__category-link" href="#">Катера</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Гидроциклы</a></li>
+          <li class="header__category-item"><a class="header__category-link header__category-link--active" href="#">Гидроциклы</a></li>
           <li class="header__category-item"><a class="header__category-link" href="#">Лодки</a></li>
           <li class="header__category-item"><a class="header__category-link" href="#">Вездеходы</a></li>
           <li class="header__category-item"><a class="header__category-link" href="#">Снегоходы</a></li>
@@ -57,12 +57,12 @@
       <div class="container">
         <div class="promo-section__inner">
           <div class="promo-section__slider">
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
-            <div class="promo-section__slide"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></div>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main.jpg" alt="#"></a>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main2.jpg" alt="#"></a>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main3.jpg" alt="#"></a>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main4.jpg" alt="#"></a>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main5.jpg" alt="#"></a>
+            <a class="promo-section__slide" href="#"><img class="promo-section__image" src="images/content/banner-main6.jpg" alt="#"></a>
           </div>
           <a class="promo-section__banner" href="#">
             <div class="promo-section__banner-top">
@@ -83,14 +83,48 @@
               </div>
 
             </div>
-            <div class="promo-section__banner-middle">
-              <img class="promo-section__banner-img" src="images/content/promo-motor.png" alt="banner image">
-              <div class="promo-section__banner-info">Лодочный мотор Suzuki DF9.9BRS</div>
+            <div class="promo-section__banner-image">
+              <img class="promo-section__banner-img" src="images/content/promo-motor3.png" alt="banner image">
             </div>
-            <div class="promo-section__banner-bottom">Акция действует
-              до<time class="promo-section__highlight" datetime="2020-08-31">31.08.2020</time></div>
+            <div class="promo-section__banner-title">Лодочный мотор Suzuki DF9.9BRS</div>
+            <div class="promo-section__banner-bottom">
+              Акция действует до
+              <time class="promo-section__highlight" datetime="2020-08-31">31.08.2020</time>
+            </div>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- SEARCH SECTION -->
+    <section class="search">
+      <div class="container">
+        <div class="search__tabs">
+          <span class="search__tab" data-id="tab-1">Поиск по номеру</span>
+          <span class="search__tab search__tab--active" data-id="tab-2">Поиск по марке</span>
+          <span class="search__tab" data-id="tab-3">Поиск по названию товара</span>
+        </div>
+        <div class="search__tabs-content">
+          <div class="search__content" id="tab-1">
+            <form action="" class="search__form">
+              <input class="search__input" type="search" placeholder="Введите номер ">
+              <button class="search__btn" type="submit">искать</button>
+            </form>
+          </div>
+          <div class="search__content search__content--active" id="tab-2">
+            <form action="" class="search__form">
+              <input class="search__input" type="search" placeholder="Введите марку ">
+              <button class="search__btn" type="submit">искать</button>
+            </form>
+          </div>
+          <div class="search__content" id="tab-3">
+            <form action="" class="search__form">
+              <input class="search__input" type="search" placeholder="Введите название товара">
+              <button class="search__btn" type="submit">искать</button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
 
