@@ -329,6 +329,13 @@
     display: block;
   }
 }
+
+.tabs-title {
+  @extend %barlow-bold;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
 /* TABS END */
 
 /* SEARCH START */
@@ -478,8 +485,10 @@
 /* PRODUCTS START */
 .products {
   margin-bottom: 86px;
-  .tabs {
 
+
+  &__tab-box {
+    display: flex;
   }
 }
 /* PRODUCTS END */
