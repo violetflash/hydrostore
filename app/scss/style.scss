@@ -322,49 +322,40 @@
 /* PROMO-SECTION END */
 
 /* TABS START */
-.tabs {
-  .search {
+.tab-content {
+  display: none;
 
-    .tabs__box {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 25px;
-    }
-
-    .tabs__tab {
-      font-size: 20px;
-      line-height: 24px;
-      padding: 12px 26px;
-      cursor: pointer;
-      @include focus;
-      &:not(:last-child) {
-        margin-right: 2px;
-      }
-      &:hover {
-        text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-      }
-      &--active {
-        background-color: #F0F0F4;
-        border-radius: 5px;
-        text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-      }
-    }
-
-    .tabs__content {
-      display: none;
-      &--active {
-        display: block;
-      }
-    }
+  &--active {
+    display: block;
   }
 }
 /* TABS END */
 
-
-
 /* SEARCH START */
 .search {
   margin-bottom: 80px;
+
+  &__tabs-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  &__tab {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 12px 26px;
+    cursor: pointer;
+    @include focus;
+
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
+
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+  }
 
   &__form {
     display: flex;
@@ -399,6 +390,12 @@
     background-color: $accent;
     cursor: pointer;
     @include focus;
+  }
+
+  .tab--active {
+    background-color: #F0F0F4;
+    border-radius: 5px;
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
   }
 }
 /* SEARCH END */
@@ -469,7 +466,6 @@
 
   &__image {
     padding: 5px;
-
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -481,6 +477,9 @@
 /* PRODUCTS START */
 .products {
   margin-bottom: 86px;
+  .tabs {
+
+  }
 }
 /* PRODUCTS END */
 

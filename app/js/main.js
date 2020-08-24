@@ -13,12 +13,12 @@ $(function () {
         $(this).addClass('header__category-link--active')
     });
 
-    $('.tabs__tab').on('click', function (event) {
+    $('.tab').on('click', function (event) {
         var id = $(this).attr('data-id'); //забирает значение атрибута
-        $('.tabs__tab').removeClass('tabs__tab--active');
-        $('.tabs__content').removeClass('tabs__content--active').hide();
-        $(this).addClass('tabs__tab--active');
-        $('#'+id).addClass('tabs__content--active').fadeIn() //добавляем класс по полученному значению атрибута
+        $('.tab').removeClass('tab--active');
+        $('.tab-content').removeClass('tab-content--active').hide();
+        $(this).addClass('tab--active');
+        $('#'+id).addClass('tab-content--active').fadeIn() //добавляем класс по полученному значению атрибута
     })
 
     // $('.search__tabs .search__tab').on('click', function(event) {
