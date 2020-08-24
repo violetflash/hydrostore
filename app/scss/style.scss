@@ -421,9 +421,10 @@
     @include focus;
     position: relative;
 
+
     &:hover {
       box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
-      border: none;
+      border-color: transparent;
 
       .categories__name {
         color: $accent;
