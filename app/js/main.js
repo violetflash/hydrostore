@@ -31,10 +31,10 @@ $(function () {
 
     $('.tab').on('click', function (event) {
         var id = $(this).attr('data-id'); //забирает значение атрибута
-        $('.tab').removeClass('tab--active');
-        $('.tab-content').removeClass('tab-content--active').hide();
+        $($(this).siblings()).removeClass('tab--active'); //siblings - метод, поиск по соседним элементам
+        $($(this).parent().siblings().find('div')).removeClass('tab-content--active');
         $(this).addClass('tab--active');
-        $('#' + id).addClass('tab-content--active').fadeIn() //добавляем класс по полученному значению атрибута
+        $('#' + id).addClass('tab-content--active') //добавляем класс по полученному значению атрибута
     });
 
     $('.products__like').on('click', function () {
