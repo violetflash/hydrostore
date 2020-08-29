@@ -840,7 +840,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    margin-right: 80px;
+    //justify-content: space-around;
+  }
+
+  &__social-link {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__copy {
@@ -857,9 +864,31 @@
     }
   }
 }
-
-
 /* FOOTER END */
+
+/* CATALOG PAGE */
+
+/* BREADCRUMBS START */
+.breadcrumbs {
+  margin: 40px 0;
+  &__item {
+    display: inline-block;
+    padding-right: 16px;
+    &::after {
+
+    }
+  }
+
+  &__link {
+    @extend %sf-regular;
+    font-size: 15px;
+    line-height: 18px;
+    color: #c4c4c4;
+
+
+  }
+}
+/* BREADCRUMBS END */
 
 
 
