@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   color: #2F3035;
   @extend %sf-regular;
+  height: 100%;
 }
 
 .container {
@@ -36,3 +37,12 @@ body {
   margin: 0 auto;
 }
 
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}

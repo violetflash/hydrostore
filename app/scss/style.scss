@@ -45,7 +45,7 @@
       content: '';
       width: 30px;
       height: 30px;
-      background-image: url('../images/content/nav-marker.svg');
+      background-image: url('../images/icons/nav-marker.svg');
       background-repeat: no-repeat;
       background-position: center center;
       left: 0;
@@ -635,8 +635,7 @@
     width: 200px;
     height: 200px;
     overflow: hidden;
-    margin: 0 auto;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
   }
 
   &__image-popup {
@@ -767,6 +766,7 @@
 
 /* FOOTER START */
 .footer {
+  flex: 0 0 auto;
   background-color: #f0f0f4;
   padding: 43px 0 27px;
   &__inner {
@@ -870,12 +870,22 @@
 
 /* BREADCRUMBS START */
 .breadcrumbs {
-  margin: 40px 0;
+  margin: 40px 0 41px;
   &__item {
     display: inline-block;
     padding-right: 16px;
-    &::after {
-
+    &:not(:last-child) {
+      position: relative;
+      margin-right: 10px;
+      &::after {
+        position: absolute;
+        content: '';
+        background-image: url('../images/icons/breadcrumbs-arrow.svg');
+        width: 6px;
+        height: 10px;
+        right: 0;
+        bottom: 4px;
+      }
     }
   }
 
@@ -884,11 +894,63 @@
     font-size: 15px;
     line-height: 18px;
     color: #c4c4c4;
-
-
+    text-transform: capitalize;
   }
 }
 /* BREADCRUMBS END */
+
+/* CATALOG START */
+.catalog {
+  padding-bottom: 100px;
+
+  &__title {
+    @extend %sf-bold;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 26px;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tag {
+    padding: 4px 28px;
+    background: #F0F0F4;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    @include focus;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__sort-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__select-wrapper {
+    max-width: 178px;
+    width: 100%;
+  }
+
+  &__select {
+    width: 100%;
+    margin-right: 34px;
+    padding: 8px 20px;
+  }
+
+  &__view {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+/* CATALOG END */
 
 
 

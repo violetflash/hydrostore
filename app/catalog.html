@@ -10,61 +10,94 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__top">
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">Магазины</a></li>
-            <li class="header__item"><a class="header__link" href="#">Акции</a></li>
-            <li class="header__item"><a class="header__link" href="#">Доставка и оплата</a></li>
-          </ul>
-        </nav>
-        <a href="" class="header__logo"><img class="header__logo-img" src="images/icons/logo.svg" alt="logotype"></a>
-        <div class="header__box">
-          <div class="header__address">Москва, ул. Науки 25</div>
-          <ul class="header__user-list">
-            <li class="header__user-item"><a class="header__user-link" href="#">
-              <img src="images/icons/favorites.svg" alt="user menu">
-            </a></li>
-            <li class="header__user-item"><a class="header__user-link" href="#">
-              <img src="images/icons/user.svg" alt="user menu">
-            </a></li>
-            <li class="header__user-item new"><a class="header__user-link" href="#">
-              <img src="images/icons/cart.svg" alt="user menu">
-              <span class="new__num">188</span>
-            </a></li>
-          </ul>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="#">Магазины</a></li>
+                <li class="header__item"><a class="header__link" href="#">Акции</a></li>
+                <li class="header__item"><a class="header__link" href="#">Доставка и оплата</a></li>
+              </ul>
+            </nav>
+            <a href="" class="header__logo"><img class="header__logo-img" src="images/icons/logo.svg" alt="logotype"></a>
+            <div class="header__box">
+              <div class="header__address">Москва, ул. Науки 25</div>
+              <ul class="header__user-list">
+                <li class="header__user-item"><a class="header__user-link" href="#">
+                  <img src="images/icons/favorites.svg" alt="user menu">
+                </a></li>
+                <li class="header__user-item"><a class="header__user-link" href="#">
+                  <img src="images/icons/user.svg" alt="user menu">
+                </a></li>
+                <li class="header__user-item new"><a class="header__user-link" href="#">
+                  <img src="images/icons/cart.svg" alt="user menu">
+                  <span class="new__num">188</span>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <ul class="header__category-list">
+              <li class="header__category-item"><a class="header__category-link" href="#">Квадроциклы</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Катера</a></li>
+              <li class="header__category-item"><a class="header__category-link header__category-link--active" href="#">Гидроциклы</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Лодки</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Вездеходы</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Снегоходы</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Двигатели</a></li>
+              <li class="header__category-item"><a class="header__category-link" href="#">Запчасти</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="header__bottom">
-        <ul class="header__category-list">
-          <li class="header__category-item"><a class="header__category-link" href="#">Квадроциклы</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Катера</a></li>
-          <li class="header__category-item"><a class="header__category-link header__category-link--active" href="#">Гидроциклы</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Лодки</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Вездеходы</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Снегоходы</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Двигатели</a></li>
-          <li class="header__category-item"><a class="header__category-link" href="#">Запчасти</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="breadcrumbs">
-      <div class="container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">гидроциклы</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      </header>
+      <main>
 
+        <section class="breadcrumbs">
+          <div class="container">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__link">гидроциклы</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="catalog">
+          <div class="container">
+            <div class="catalog__title">Гидроциклы</div>
+            <div class="catalog__filters">
+              <div class="catalog__tags">
+                <button class="catalog__tag">Полноприводные</button>
+                <button class="catalog__tag">от 5000</button>
+                <button class="catalog__tag">BRP</button>
+                <button class="catalog__tag">Показать все</button>
+              </div>
+              <div class="catalog__sort-box">
+                <div class="catalog__select-wrapper">
+                  <select class="catalog__select">
+                    <option>По популярности</option>
+                    <option>По рейтингу</option>
+                    <option>По возрастанию цены</option>
+                    <option>По убыванию цены</option>
+                  </select>
+                </div>
+                <div class="catalog__view-box">
+                  <button class="catalog__view"><img class="catalog__view-icon" src="images/icons/product-grid-default.svg" alt="grid view"></button>
+                  <button class="catalog__view"><img class="catalog__view-icon" src="images/icons/product-list-default.svg" alt="list view"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -114,8 +147,7 @@
         </div>
       </div>
     </footer>
-
-  </main>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
