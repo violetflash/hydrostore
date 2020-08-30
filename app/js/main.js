@@ -37,10 +37,13 @@ $(function () {
         $('#' + id).addClass('tab-content--active') //добавляем класс по полученному значению атрибута
     });
 
-    $('.products__like').on('click', function () {
-        $(this).toggleClass('products__like--liked');
+    $('.product__like').on('click', function () {
+        $(this).toggleClass('product__like--liked');
+    });
 
-
-    })
+    $('.catalog__view').on('click', function () {
+        $('.catalog__view').removeClass('catalog__view--active');
+        $(this).addClass('catalog__view--active')
+    });
 
 });

@@ -568,68 +568,81 @@
   //  height: inherit !important;
   //}
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 1px solid #CDCDCD;
-    border-radius: 3px;
-    max-width: 270px;
-    height: 403px;
-    padding: 52px 20px 25px;
-    position: relative;
-    margin-right: 30px;
+  &__btn {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 17px 43px;
+    background-color: #F0F0F4;
+    margin-top: 35px;
+    @include focus;
 
-    &:hover {
-      box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
-      border-color: transparent;
+  }
+}
+/* PRODUCTS END */
 
-      .products__info,
-      .products__price {
-        color: $accent;
-      }
+/* PRODUCT START */
+.product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  max-width: 270px;
+  height: 403px;
+  padding: 52px 20px 25px;
+  position: relative;
+  margin-right: 30px;
 
-      .products__image-popup {
-        padding: 18px 21px;
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    border-color: transparent;
 
-        opacity: 1;
-        transform: translateY(-100%);
-      }
+    .product__info,
+    .product__price {
+      color: $accent;
     }
 
-    &.sale {
-      &::before {
-        position: absolute;
-        content: 'SALE';
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.07em;
-        padding: 8px 15px;
-        background-color: $accent;
-        color: #fff;
-        top: -1px;
-        left: -1px;
-      }
-    }
+    .product__image-popup {
+      padding: 18px 21px;
 
-    &.outstock {
-
-      .products__outstock {
-        display: block;
-      }
-
-      .products__notifyer {
-        display: inline-block;
-      }
-
-      .products__cart,
-      .products__price {
-        display: none;
-      }
-
+      opacity: 1;
+      transform: translateY(-100%);
     }
   }
 
+  &.sale {
+    &::before {
+      position: absolute;
+      content: 'SALE';
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.07em;
+      padding: 8px 15px;
+      background-color: $accent;
+      color: #fff;
+      top: -1px;
+      left: -1px;
+    }
+  }
+
+  &.outstock {
+
+    .product__outstock {
+      display: block;
+    }
+
+    .product__notifyer {
+      display: inline-block;
+    }
+
+    .product__cart,
+    .product__price {
+      display: none;
+    }
+  }
 
   &__image-box {
     width: 200px;
@@ -743,22 +756,8 @@
 
     }
   }
-
-  &__btn {
-    display: inline-block;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 17px 43px;
-    background-color: #F0F0F4;
-    margin-top: 35px;
-    @include focus;
-
-  }
 }
-
-/* PRODUCTS END */
+/* PRODUCT END */
 
 .banner {
   margin-bottom: 72px;
@@ -910,10 +909,11 @@
     margin-bottom: 26px;
   }
 
-  &__filters {
+  &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 47px;
   }
 
   &__tag {
@@ -934,20 +934,63 @@
   }
 
   &__select-wrapper {
-    max-width: 178px;
     width: 100%;
+    margin-right: 34px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 8px;
+      background-image: url('../images/icons/select-arrow.svg');
+      background-repeat: no-repeat;
+      right: 20px;
+      top: 14px;
+    }
   }
 
   &__select {
-    width: 100%;
-    margin-right: 34px;
-    padding: 8px 20px;
+    max-width: 210px;
+    appearance: none;
+    padding: 8px 46px 8px 20px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1.5px solid #D7D9DF;
+    @include focus;
+  }
+
+  &__view-box {
+    display: flex;
   }
 
   &__view {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    @include focus;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      svg g{
+        opacity: 1;
+      }
+    }
+    &--active {
+      svg g{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filters {
+    max-width: 291px;
+    width: 100%;
+    margin-right: 9px;
   }
 }
 /* CATALOG END */
