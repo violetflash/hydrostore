@@ -920,11 +920,18 @@
     padding: 4px 28px;
     background: #F0F0F4;
     border-radius: 3px;
+    opacity: .7;
     cursor: pointer;
     border: none;
     @include focus;
     &:not(:last-child) {
       margin-right: 8px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &--active {
+      opacity: 1;
     }
   }
 
@@ -992,8 +999,47 @@
     width: 100%;
     margin-right: 9px;
   }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    margin: 0 0 69px -28px;
+  }
+
+  .product {
+    margin: 0 0 30px 28px;
+  }
 }
+
+.pagination {
+  text-align: center;
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    @extend %barlow-regular;
+    font-size: 18px;
+    color: #C4C4C4;
+
+    &:hover {
+      padding: 7px 15px;
+      border: 2px solid $accent;
+    }
+
+    &--active {
+      padding: 7px 15px;
+      border: 2px solid $accent;
+    }
+  }
+}
+
 /* CATALOG END */
+
 
 
 

@@ -46,4 +46,8 @@ $(function () {
         $(this).addClass('catalog__view--active')
     });
 
+    $('.catalog__tag').on('click', function () {
+        $(this).toggleClass('catalog__tag--active');
+    });
+
 });
