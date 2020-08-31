@@ -929,9 +929,13 @@
     }
     &:hover {
       opacity: 1;
+      color: #fff;
+      background-color: $accent;
     }
     &--active {
       opacity: 1;
+      color: #fff;
+      background-color: $accent;
     }
   }
 
