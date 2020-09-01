@@ -1013,6 +1013,16 @@
 
   .product {
     margin: 0 0 30px 28px;
+    &.list {
+      max-width: 100%;
+      width: 100%;
+      padding: 10px;
+      height: 100%;
+
+      .product__price {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -1047,7 +1057,6 @@
     }
   }
 }
-
 /* CATALOG END */
 
 

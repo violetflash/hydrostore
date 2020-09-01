@@ -43,11 +43,24 @@ $(function () {
 
     $('.catalog__view').on('click', function () {
         $('.catalog__view').removeClass('active');
-        $(this).addClass('active')
+        $(this).addClass('active');
+    });
+
+    $('.catalog__grid').on('click', function () {
+        $('.catalog .product').removeClass('list');
+    });
+
+    $('.catalog__list').on('click', function () {
+        $('.catalog .product').addClass('list');
     });
 
     $('.catalog__tag').on('click', function () {
         $(this).toggleClass('active');
+    });
+
+    $('.pagination__link').on('click', function () {
+        $('.pagination__link').removeClass('active');
+        $(this).addClass('active');
     });
 
 });
