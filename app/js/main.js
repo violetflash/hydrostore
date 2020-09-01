@@ -14,7 +14,7 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 2,
         // adaptiveHeight: true,
-        // autoplay: true,
+        autoplay: true,
         speed: 800,
 
     });
@@ -58,9 +58,19 @@ $(function () {
         $(this).toggleClass('active');
     });
 
-    $('.pagination__link').on('click', function () {
-        $('.pagination__link').removeClass('active');
+    $('.pagination__item').on('click', function () {
+        $('.pagination__item').removeClass('active');
         $(this).addClass('active');
     });
+
+    $('.pagination__next').on('click', function () {
+        $('.pagination__list').find('.pagination__item.active').next().addClass('active');
+        $('.pagination__list').find('.pagination__item.active').prev().removeClass('active');
+    });
+
+    $('.pagination__prev').on('click', function () {
+        $('.pagination__list').find('.pagination__item.active').prev().addClass('active');
+        $('.pagination__list').find('.pagination__item.active').next().removeClass('active');
+    })
 
 });
