@@ -42,12 +42,12 @@ $(function () {
     });
 
     $('.catalog__view').on('click', function () {
-        $('.catalog__view').removeClass('catalog__view--active');
-        $(this).addClass('catalog__view--active')
+        $('.catalog__view').removeClass('active');
+        $(this).addClass('active')
     });
 
     $('.catalog__tag').on('click', function () {
-        $(this).toggleClass('catalog__tag--active');
+        $(this).toggleClass('active');
     });
 
 });

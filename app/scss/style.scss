@@ -932,7 +932,7 @@
       color: #fff;
       background-color: $accent;
     }
-    &--active {
+    &.active {
       opacity: 1;
       color: #fff;
       background-color: $accent;
@@ -987,7 +987,7 @@
         opacity: 1;
       }
     }
-    &--active {
+    &.active {
       svg g{
         opacity: 1;
       }
@@ -1021,23 +1021,29 @@
   &__item {
     display: inline-block;
     &:not(:last-child) {
-      margin-right: 40px;
+      margin-right: 6px;
     }
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @extend %barlow-regular;
     font-size: 18px;
     color: #C4C4C4;
+    width: 39px;
+    height: 39px;
+    border: 2px solid transparent;
 
     &:hover {
-      padding: 7px 15px;
       border: 2px solid $accent;
     }
 
-    &--active {
-      padding: 7px 15px;
+    &.active {
       border: 2px solid $accent;
+      color: $accent;
+      cursor: default;
     }
   }
 }
