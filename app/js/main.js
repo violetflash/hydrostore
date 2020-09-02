@@ -77,7 +77,14 @@ $(function () {
 
     $('.filters__title').on('click', function () {
         $(this).toggleClass('opened');
-        $('.filters__box').slideToggle();
+        $(this).siblings('.filters__box').slideToggle().addClass('opened');
+    });
+
+    $('.filters__hide').on('click', function () {
+        $('.filters__box.opened').slideToggle().removeClass('opened');
+        $('.filters__title').removeClass('opened');
+        $('.filters__box').slideToggle().addClass('opened');
+        $('.filters__title').addClass('opened');
     })
 
 });
