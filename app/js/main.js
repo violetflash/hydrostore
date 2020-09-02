@@ -48,10 +48,12 @@ $(function () {
 
     $('.catalog__grid').on('click', function () {
         $('.catalog .product').removeClass('list');
+        $('.catalog__products').removeClass('list')
     });
 
     $('.catalog__list').on('click', function () {
         $('.catalog .product').addClass('list');
+        $('.catalog__products').addClass('list')
     });
 
     $('.catalog__tag').on('click', function () {
@@ -71,6 +73,11 @@ $(function () {
     $('.pagination__prev').on('click', function () {
         $('.pagination__list').find('.pagination__item.active').prev().addClass('active');
         $('.pagination__list').find('.pagination__item.active').next().removeClass('active');
+    });
+
+    $('.filters__title').on('click', function () {
+        $(this).toggleClass('opened');
+        $('.filters__box').slideToggle();
     })
 
 });
