@@ -1093,7 +1093,7 @@
 
   &__tab-box {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &__tab {
@@ -1129,14 +1129,26 @@
     margin-bottom: 30px;
   }
 
-  &__hide {
+  &__show-hide {
     text-align: center;
-    padding: 10px;
-    background-color: $accent;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__show,
+  &__hide {
+    width: 50%;
+    padding: 5px 0;
     cursor: pointer;
+    background-color: $accent;
     color: #fff;
-    //text-decoration: underline;
-    margin-bottom: 40px;
+  }
+
+  &__hide {
+    border-right: 1px solid #fff;
+  }
+  &__show {
+    border-left: 1px solid #fff;
   }
 
   &__title {

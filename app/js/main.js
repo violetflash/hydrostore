@@ -81,10 +81,13 @@ $(function () {
     });
 
     $('.filters__hide').on('click', function () {
-        $('.filters__box.opened').slideToggle().removeClass('opened');
+        $('.filters__box.opened').slideToggle().removeClass('opened').addClass('closed');
         $('.filters__title').removeClass('opened');
-        $('.filters__box').slideToggle().addClass('opened');
+    });
+
+    $('.filters__show').on('click', function () {
+        $('.filters__box.closed').slideToggle().removeClass('closed').addClass('opened');
         $('.filters__title').addClass('opened');
-    })
+    });
 
 });
