@@ -1088,7 +1088,6 @@
 /* FILTERS START */
 .filters {
   min-width: 291px;
-  //width: 100%;
   margin-right: 9px;
 
   &__tab-box {
@@ -1186,7 +1185,7 @@
   }
 
   &__box {
-    padding: 10px;
+
     &.closed {
       display: none;
     }
@@ -1196,13 +1195,10 @@
     }
     &.short {
       max-width: 250px;
-
     }
-  }
-
-  &__button-box {
-    &:not(:last-child) {
-      //margin-right: 52px;
+    &.range {
+      position: relative;
+      padding-bottom: 23px;
     }
   }
 
@@ -1250,7 +1246,61 @@
   }
 
   .irs {
-    width: 100%;
+    width: 291px;
+
+    &--flat {
+      .irs-line {
+        height: 1px;
+        background-color: #e0e0e0;
+      }
+
+      .irs-bar {
+        height: 3px;
+        top: 24px;
+        background-color: $accent;
+      }
+
+      .irs-handle>i:first-child {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $accent;
+      }
+
+      .irs-max,
+      .irs-min {
+        display: none;
+      }
+
+      .irs-from,
+      .irs-to {
+        top: 48px;
+        left: 15px !important;
+        background-color: transparent;
+        color: $basic;
+        text-decoration: underline;
+        &::before {
+          display: none;
+        }
+      }
+
+      .irs-to {
+        right: 49px !important;
+        left: unset;
+      }
+    }
+  }
+
+  &__range {
+    position: absolute;
+    font-size: 14px;
+    line-height: 17px;
+    color: $gray;
+    bottom: 0;
+    &--to {
+      right: 66px;
+    }
+
   }
 }
 /* FILTERS END */

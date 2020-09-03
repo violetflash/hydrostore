@@ -95,10 +95,10 @@ $(function () {
     $(".js-range-slider").ionRangeSlider({
         type: "double",
         min: 0,
-        max: 1000,
-        from: 200,
-        to: 500,
-        grid: true
+        max: 1300000,
+        from: 100000,
+        to: 500000,
+        // grid: true
     });
 
 });
