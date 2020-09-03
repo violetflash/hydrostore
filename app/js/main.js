@@ -76,18 +76,29 @@ $(function () {
     });
 
     $('.filters__title').on('click', function () {
-        $(this).toggleClass('opened');
-        $(this).siblings('.filters__box').slideToggle().addClass('opened');
+        $(this).toggleClass('opened').toggleClass('closed');
+        $(this).siblings('.filters__box').toggleClass('opened').toggleClass('closed');
+        // $(this).siblings('.filters__box.opened').addClass('closed').removeClass('opened');
+
     });
 
     $('.filters__hide').on('click', function () {
-        $('.filters__box.opened').slideToggle().removeClass('opened').addClass('closed');
-        $('.filters__title').removeClass('opened');
+        $('.filters__box.opened').removeClass('opened').addClass('closed');
+        $('.filters__title').removeClass('opened').addClass('closed');
     });
 
     $('.filters__show').on('click', function () {
-        $('.filters__box.closed').slideToggle().removeClass('closed').addClass('opened');
-        $('.filters__title').addClass('opened');
+        $('.filters__box.closed').removeClass('closed').addClass('opened');
+        $('.filters__title').addClass('opened').removeClass('closed');
+    });
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        from: 200,
+        to: 500,
+        grid: true
     });
 
 });

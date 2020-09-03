@@ -1140,8 +1140,12 @@
     width: 50%;
     padding: 5px 0;
     cursor: pointer;
-    background-color: $accent;
+    background-color: $gray;
     color: #fff;
+    @include focus;
+    &:hover {
+      background-color: $accent;
+    }
   }
 
   &__hide {
@@ -1163,29 +1167,90 @@
     &::before {
       position: absolute;
       content: '';
-      background-image: url('../images/icons/filter-arrow.svg');
+      background-image: url('../images/icons/filter-arrow-blue.svg');
       background-repeat: no-repeat;
       width: 12px;
       height: 8px;
       left: 0;
       bottom: 5px;
-      transition: all .4s
+      transition: all .4s;
+      transform: rotate(-180deg);
     }
     &.opened {
       //color: $accent;
       &::before {
-        transform: rotate(-180deg);
-        background-image: url('../images/icons/filter-arrow-blue.svg');
-
+        transform: rotate(0deg);
+        background-image: url('../images/icons/filter-arrow.svg');
       }
     }
-
   }
 
   &__box {
     padding: 10px;
-    display: none;
+    &.closed {
+      display: none;
+    }
+    &.opened {
+      display: flex;
+      justify-content: space-between;
+    }
+    &.short {
+      max-width: 250px;
 
+    }
+  }
+
+  &__button-box {
+    &:not(:last-child) {
+      //margin-right: 52px;
+    }
+  }
+
+  &__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+  }
+
+  &__radio-text {
+    position: relative;
+    padding: 0 0 0 22px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border: 1px solid $gray;
+      background: #FFF;
+      opacity: .54;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      background: $accent;
+      box-shadow: 0 0 3px rgba(0,0,0,.5);
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+
+  &__radio:checked + .filters__radio-text::after {
+    opacity: 1;
+  }
+  &__radio:focus + label:before {
+    //box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+  }
+
+  .irs {
+    width: 100%;
   }
 }
 /* FILTERS END */

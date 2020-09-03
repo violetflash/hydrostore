@@ -125,52 +125,82 @@
                   <div class="filters__content-box">
                     <div class="filters__content tab-content tab-content--active" id="filters-tab-1">
                       <form class="filters__form">
-                        <div class="filters__show-hide">
-                          <span class="filters__hide">Скрыть все</span>
-                          <span class="filters__show">Показать все</span>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">Наличие</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">новинки</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">цена</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">бренд</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">модель</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">акции</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
-                        <div class="filters__item">
-                          <div class="filters__title">страны</div>
-                          <div class="filters__box closed">
-                            bla-bla radio huyadio
-                          </div>
-                        </div>
+                        <ul class="filters__list">
+                          <li class="filters__show-hide">
+                            <span class="filters__hide">Скрыть все</span>
+                            <span class="filters__show">Показать все</span>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">Наличие</div>
+                            <div class="filters__box closed short">
+                              <div class="filters__button-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__radio" type="radio" name="available">
+                                  <span class="filters__radio-text">В наличии</span>
+                                </label>
+                              </div>
+                              <div class="filters__button-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__radio" type="radio" name="available">
+                                  <span class="filters__radio-text">Под заказ</span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">новинки</div>
+                            <div class="filters__box closed short">
+                              <div class="filters__button-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__radio" type="radio" name="new">
+                                  <span class="filters__radio-text">Все</span>
+                                </label>
+                              </div>
+                              <div class="filters__button-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__radio" type="radio" name="new">
+                                  <span class="filters__radio-text">Новинки</span>
+                                </label>
+                              </div>
+                              <div class="filters__button-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__radio" type="radio" name="new">
+                                  <span class="filters__radio-text">Акции</span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">цена</div>
+                            <div class="filters__box closed">
+                              <input type="text" class="js-range-slider" name="my_range" value="">
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">бренд</div>
+                            <div class="filters__box closed">
+                              bla-bla radio huyadio
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">модель</div>
+                            <div class="filters__box closed">
+                              bla-bla radio huyadio
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">акции</div>
+                            <div class="filters__box closed">
+                              bla-bla radio huyadio
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__title">страны</div>
+                            <div class="filters__box closed">
+                              bla-bla radio huyadio
+                            </div>
+                          </li>
+                        </ul>
                       </form>
 
 
@@ -193,7 +223,7 @@
                     <button class="product__like"></button>
                     <div class="product__image-box">
                       <a class="product__image-popup" href="#">посмотреть товар</a>
-                      <img class="product__image" src="images/content/hydrocycles/01.png" alt="hydrocycle image">
+                      <img class="product__image" src="images/content/hydrocycles/test.png" alt="hydrocycle image">
                     </div>
                     <a class="product__info" href="#">Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango</a>
                     <h4 class="product__outstock">нет в наличии</h4>
