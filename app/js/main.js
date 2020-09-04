@@ -93,7 +93,9 @@ $(function () {
     });
 
     $(".js-range-slider").ionRangeSlider({
-
+        type: "double",
     });
+
+    $('.filters__custom').styler()
 
 });

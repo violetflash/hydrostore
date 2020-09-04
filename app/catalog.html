@@ -180,13 +180,44 @@
                             <div class="filters__title">цена</div>
                             <div class="filters__box closed range">
                               <input type="text" class="js-range-slider" name="my_range"
-                                     data-type="double"
                                      data-min="0"
                                      data-max="1300000"
                                      data-from="100000"
                                      data-to="500000">
                               <div class="filters__range">от</div>
                               <div class="filters__range filters__range--to">до</div>
+                            </div>
+                          </li>
+                          <li class="filters__item">
+                            <div class="filters__line">
+                              <div class="filters__title line">Мощность, л.с.</div>
+                              <select class="filters__custom">
+                                <option>90</option>
+                                <option>130</option>
+                                <option>154</option>
+                                <option>230</option>
+                                <option>300</option>
+                              </select>
+                            </div>
+                            <div class="filters__line">
+                              <div class="filters__title line">Мощность двигателя, л.с.</div>
+                              <select class="filters__custom">
+                                <option>90</option>
+                                <option>130</option>
+                                <option>154</option>
+                                <option>230</option>
+                                <option>300</option>
+                              </select>
+                            </div>
+                            <div class="filters__line">
+                              <div class="filters__title line">Макс. скорость</div>
+                              <select class="filters__custom">
+                                <option>90</option>
+                                <option>130</option>
+                                <option>154</option>
+                                <option>230</option>
+                                <option>300</option>
+                              </select>
                             </div>
                           </li>
                           <li class="filters__item">
@@ -287,7 +318,7 @@
                     <div class="filters__content tab-content" id="filters-tab-2">
                       <form class="filters__form">
                         <label class="filters__label">
-                          <span class="filters__title search">Поиск по марке гидроцикла</span>
+                          <span class="filters__title line">Поиск по марке гидроцикла</span>
                           <input class="filters__input" type="search" placeholder="Введите модель" required>
                         </label>
                         <button class="filters__search-btn" type="submit">поиск</button>
