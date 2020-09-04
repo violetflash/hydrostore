@@ -1125,7 +1125,10 @@
   }
 
   &__item {
-    margin-bottom: 30px;
+    padding: 20px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
   }
 
   &__show-hide {
@@ -1148,10 +1151,10 @@
   }
 
   &__hide {
-    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
   }
   &__show {
-    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
   }
 
   &__title {
@@ -1177,7 +1180,7 @@
     }
 
     &.opened {
-      //color: $accent;
+      color: $accent;
       &::before {
         transform: rotate(0deg);
         background-image: url('../images/icons/filter-arrow.svg');
@@ -1195,34 +1198,54 @@
   }
 
   &__box {
-
-    &.closed {
+    &.closed,
+    &.new-items.closed {
       display: none;
     }
     &.opened {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
-    &.short {
-      max-width: 250px;
+
+    &.new-items {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .filters__btn-box {
+        width: unset;
+      }
     }
+
     &.range {
       position: relative;
       padding-bottom: 23px;
     }
+    .filters__input {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
   }
 
-  &__radio {
+  &__btn-box {
+    margin-bottom: 10px;
+    width: 50%;
+    overflow: auto;
+  }
+
+  &__input-btn {
     position: absolute;
     z-index: -1;
     opacity: 0;
     margin: 10px 0 0 7px;
   }
 
-  &__radio-text {
+  &__input-text {
     position: relative;
     padding: 0 0 0 22px;
     cursor: pointer;
+    max-width: 100%;
+    overflow: hidden;
     &::before,
     &::after {
       content: '';
@@ -1245,9 +1268,17 @@
       opacity: 0;
       transition: .2s;
     }
+
+    &.checkbox {
+      &::after {
+        background-image: url('../images/icons/check.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
   }
 
-  &__radio:checked + .filters__radio-text::after {
+  &__input-btn:checked + .filters__input-text::after {
     opacity: 1;
   }
 
@@ -1361,10 +1392,6 @@
   }
 }
 /* FILTERS END */
-
-
-
-
 
 
 

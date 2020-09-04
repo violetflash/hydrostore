@@ -127,45 +127,51 @@
                       <form class="filters__form">
                         <ul class="filters__list">
                           <li class="filters__show-hide">
-                            <span class="filters__hide">Скрыть все</span>
                             <span class="filters__show">Показать все</span>
+                            <span class="filters__hide">Свернуть все</span>
                           </li>
                           <li class="filters__item">
                             <div class="filters__title">Наличие</div>
-                            <div class="filters__box closed short">
-                              <div class="filters__button-box">
+                            <div class="filters__box closed">
+                              <div class="filters__btn-box">
                                 <label class="filters__radio-label">
-                                  <input class="filters__radio" type="radio" name="available">
-                                  <span class="filters__radio-text">В наличии</span>
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">В наличии</span>
                                 </label>
                               </div>
-                              <div class="filters__button-box">
+                              <div class="filters__btn-box">
                                 <label class="filters__radio-label">
-                                  <input class="filters__radio" type="radio" name="available">
-                                  <span class="filters__radio-text">Под заказ</span>
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Под заказ</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">У конкурентов</span>
                                 </label>
                               </div>
                             </div>
                           </li>
                           <li class="filters__item">
                             <div class="filters__title">новинки</div>
-                            <div class="filters__box closed short">
-                              <div class="filters__button-box">
+                            <div class="filters__box closed new-items">
+                              <div class="filters__btn-box">
                                 <label class="filters__radio-label">
-                                  <input class="filters__radio" type="radio" name="new">
-                                  <span class="filters__radio-text">Все</span>
+                                  <input class="filters__input-btn" type="radio" name="new">
+                                  <span class="filters__input-text radio">Все</span>
                                 </label>
                               </div>
-                              <div class="filters__button-box">
+                              <div class="filters__btn-box">
                                 <label class="filters__radio-label">
-                                  <input class="filters__radio" type="radio" name="new">
-                                  <span class="filters__radio-text">Новинки</span>
+                                  <input class="filters__input-btn" type="radio" name="new">
+                                  <span class="filters__input-text radio">Новинки</span>
                                 </label>
                               </div>
-                              <div class="filters__button-box">
+                              <div class="filters__btn-box">
                                 <label class="filters__radio-label">
-                                  <input class="filters__radio" type="radio" name="new">
-                                  <span class="filters__radio-text">Акции</span>
+                                  <input class="filters__input-btn" type="radio" name="new">
+                                  <span class="filters__input-text radio">Акции</span>
                                 </label>
                               </div>
                             </div>
@@ -173,7 +179,12 @@
                           <li class="filters__item">
                             <div class="filters__title">цена</div>
                             <div class="filters__box closed range">
-                              <input type="text" class="js-range-slider" name="my_range" value="">
+                              <input type="text" class="js-range-slider" name="my_range"
+                                     data-type="double"
+                                     data-min="0"
+                                     data-max="1300000"
+                                     data-from="100000"
+                                     data-to="500000">
                               <div class="filters__range">от</div>
                               <div class="filters__range filters__range--to">до</div>
                             </div>
@@ -181,13 +192,54 @@
                           <li class="filters__item">
                             <div class="filters__title">бренд</div>
                             <div class="filters__box closed">
-                              bla-bla radio huyadio
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">BRP</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Spark 2</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Spark 3</span>
+                                </label>
+                              </div>
                             </div>
                           </li>
                           <li class="filters__item">
                             <div class="filters__title">модель</div>
                             <div class="filters__box closed">
-                              bla-bla radio huyadio
+                              <input class="filters__input" type="search" placeholder="Введите модель" required>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Sea-doo Spark 2</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">SeaDoo Spark 90 </span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">SeaDoo GTI 155</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">SeaDoo GTR 230</span>
+                                </label>
+                              </div>
                             </div>
                           </li>
                           <li class="filters__item">
@@ -199,7 +251,30 @@
                           <li class="filters__item">
                             <div class="filters__title">страны</div>
                             <div class="filters__box closed">
-                              bla-bla radio huyadio
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Россия</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Германия</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">Китай</span>
+                                </label>
+                              </div>
+                              <div class="filters__btn-box">
+                                <label class="filters__radio-label">
+                                  <input class="filters__input-btn" type="checkbox">
+                                  <span class="filters__input-text checkbox">США</span>
+                                </label>
+                              </div>
                             </div>
                           </li>
                         </ul>
@@ -213,10 +288,10 @@
                       <form class="filters__form">
                         <label class="filters__label">
                           <span class="filters__title search">Поиск по марке гидроцикла</span>
-                          <input class="filters__input" type="search" id="mark" placeholder="Введите модель">
+                          <input class="filters__input" type="search" placeholder="Введите модель" required>
                         </label>
-                      </form>
                         <button class="filters__search-btn" type="submit">поиск</button>
+                      </form>
                     </div>
 
                   </div>

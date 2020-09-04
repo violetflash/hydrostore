@@ -93,12 +93,7 @@ $(function () {
     });
 
     $(".js-range-slider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 1300000,
-        from: 100000,
-        to: 500000,
-        // grid: true
+
     });
 
 });
