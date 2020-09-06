@@ -16,7 +16,6 @@ $(function () {
         // adaptiveHeight: true,
         autoplay: true,
         speed: 800,
-
     });
 
 

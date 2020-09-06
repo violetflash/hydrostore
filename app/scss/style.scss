@@ -1125,9 +1125,46 @@
   }
 
   &__item {
-    padding: 20px 0;
+    padding-bottom: 10px;
     &:not(:last-child) {
       border-bottom: 1px solid $gray;
+    }
+
+    &--buttons {
+      margin-top: 40px;
+      text-align: center;
+
+      .filters__title {
+        background-color: transparent;
+        border: none;
+        font-size: 13px;
+        line-height: 16px;
+        cursor: pointer;
+        padding: 0 30px 0 0;
+        position: relative;
+        margin-bottom: 15px;
+        @include focus;
+        &::after {
+          position: absolute;
+          content: '';
+          background-image: url('../images/icons/filter-arrow-blue.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 12px;
+          height: 8px;
+          right: 0;
+          top: 5px;
+          transform: rotate(180deg);
+          transition: all .4s;
+        }
+        &::before {
+          display: none;
+        }
+        &.opened::after {
+          background-image: url('../images/icons/filter-arrow.svg');
+          transform: rotate(0);
+        }
+      }
     }
   }
 
@@ -1162,7 +1199,7 @@
     @extend %sf-medium;
     font-size: 16px;
     line-height: 19px;
-    padding-left: 26px;
+    padding: 20px 0 10px 26px;
     cursor: pointer;
     position: relative;
     text-transform: capitalize;
@@ -1174,9 +1211,10 @@
       width: 12px;
       height: 8px;
       left: 0;
-      bottom: 5px;
+      top: 26px;
       transition: all .4s;
       transform: rotate(-180deg);
+
     }
 
     &.opened {
@@ -1188,7 +1226,7 @@
     }
 
     &.line {
-      padding-left: 0;
+      padding: 0;
       margin-bottom: 0;
       text-transform: initial;
       cursor: default;
@@ -1230,10 +1268,74 @@
       margin-top: 0;
       margin-bottom: 20px;
     }
+
+    &.actions {
+      flex-wrap: nowrap;
+      .filters__btn-box {
+        margin-bottom: 0;
+        margin-top: 20px;
+        width: auto;
+        overflow: hidden;
+      }
+      .filters__input-text {
+        display: inline-block;
+        position: relative;
+        padding: 8px 15px;
+        cursor: pointer;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: #f0f0f4;
+        color: $gray;
+        @extend %sf-bold;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        transition: all .4s;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: unset;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: auto;
+          //border-radius: 3px;
+        }
+        &::before {
+          border: none;
+          opacity: 0;
+        }
+
+        &::after {
+          background-color: transparent;
+          color: #fff;
+          box-shadow: none;
+          opacity: 0;
+          transition: .2s;
+        }
+
+        &.checkbox {
+          &::after {
+            background-image: none;
+
+          }
+        }
+      }
+      .filters__input-btn:checked + .filters__input-text {
+        color: #fff;
+        background-color: $accent;
+      }
+      .filters__input-btn:checked + .filters__input-text.dealer {
+        color: #fff;
+        background-color: $basic;
+      }
+    }
   }
 
   &__btn-box {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     width: 50%;
     overflow: auto;
   }
@@ -1394,6 +1496,7 @@
   }
 
   &__line {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1406,6 +1509,7 @@
     @extend %barlow-regular;
     font-size: 18px;
     line-height: 17px;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .jq-selectbox {
@@ -1434,6 +1538,7 @@
 
     &__dropdown {
       margin-top: 10px;
+      top: 13px;
       padding: 15px 0 8px;
       background-color: #fff;
       border: 1px solid #e0e0e0;
@@ -1444,8 +1549,9 @@
       }
       li {
         padding: 5px 19px 7px 15px;
+
         &.selected,
-        &.selected.sel {
+        &.sel {
           background-color: rgba(107, 126, 172, 0.05);
         }
 
@@ -1455,6 +1561,59 @@
       }
     }
   }
+
+  &__more-wrapper {
+    width: 100%;
+    //text-align: left;
+
+  }
+
+  &__more {
+    @extend %sf-regular;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $accent;
+    @include focus;
+    padding: 0;
+    border-bottom: 1px solid $accent;
+  }
+
+  &__send {
+    padding: 15px;
+    max-width: 252px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #BDBEC2;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    @include focus;
+
+    &:hover,
+    &--active {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+
+  &__reset {
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $gray;
+    padding: 0;
+    cursor: pointer;
+  }
+
 }
 /* FILTERS END */
 
