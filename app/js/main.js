@@ -95,6 +95,13 @@ $(function () {
         type: "double",
     });
 
-    $('.filters__custom').styler()
+    $('.filters__custom').styler();
+
+    try {
+        var mixer = mixitup('.catalog__products');
+    }
+    catch {}
+
+
 
 });

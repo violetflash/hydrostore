@@ -1000,6 +1000,11 @@
     display: flex;
   }
 
+  &__content {
+    max-width: 870px;
+    width: 100%;
+  }
+
   &__products {
     display: flex;
     flex-wrap: wrap;
@@ -1017,15 +1022,11 @@
       padding: 10px 20px;
       height: 100%;
       margin-left: 0;
-      //text-align: center;
-
-
+      transition: all .4s;
       .product__price {
         margin-top: 0;
       }
-      .product__image-box {
-        //margin: 0;
-      }
+
     }
   }
 }
@@ -1087,7 +1088,7 @@
 
 /* FILTERS START */
 .filters {
-  min-width: 291px;
+  max-width: 291px;
   margin-right: 9px;
 
   &__tab-box {
