@@ -36,8 +36,8 @@ $(function () {
         $('#' + id).addClass('tab-content--active') //добавляем класс по полученному значению атрибута
     });
 
-    $('.product__like').on('click', function () {
-        $(this).toggleClass('product__like--liked');
+    $('.favorite').on('click', function () {
+        $(this).toggleClass('favorite--added');
     });
 
     $('.catalog__view').on('click', function () {
@@ -56,7 +56,11 @@ $(function () {
     });
 
     $('.catalog__tag').on('click', function () {
-        $(this).toggleClass('active');
+        //множественный выбор
+        // $(this).toggleClass('active');
+        //Выбор по 1
+        $('.catalog__tag').removeClass('active');
+        $(this).addClass('active')
     });
 
     $('.pagination__item').on('click', function () {
@@ -101,6 +105,15 @@ $(function () {
         var mixer = mixitup('.catalog__products');
     }
     catch {}
+
+    $('.card__rating').rateYo({
+        starWidth: "23px",
+        ratedFill: "#1C62CD",
+        rating: 4,
+        spacing: "7px",
+        readOnly: true
+    });
+
 
 
 
