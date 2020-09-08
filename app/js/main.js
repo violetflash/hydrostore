@@ -125,9 +125,8 @@ $(function () {
     $('.card__rating').rateYo({
         starWidth: "23px",
         ratedFill: "#1C62CD",
-        rating: 4,
-        spacing: "7px",
-        readOnly: true
+        normalFill: "#c4c4c4",
+        spacing: "7px"
     });
 
 

@@ -95,7 +95,10 @@
                     <img class="card__compare-icon" src="images/icons/comparsion.svg" alt="comparsion icon image">
                   </a>
                   <a class="card__rate" href="#">
-                    <div class="card__rating"></div>
+                    <div class="card__rating"
+                         data-rateyo-rating="4"
+                         data-rateyo-read-only="true">
+                    </div>
                   </a>
 
                 </div>
@@ -212,6 +215,144 @@
                 <button class="card__buy" type="button">Купить</button>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="info">
+          <div class="container">
+            <div class="info__tab-box">
+              <div class="info__tab tab" data-id="info-tab-1">О товаре</div>
+              <div class="info__tab tab" data-id="info-tab-2">Характеристики</div>
+              <div class="info__tab tab" data-id="info-tab-3">Отзывы</div>
+              <div class="info__tab tab tab--active" data-id="info-tab-4">Самовывоз</div>
+              <div class="info__tab tab" data-id="info-tab-5">Доставка</div>
+              <div class="info__tab tab" data-id="info-tab-6">Cервис</div>
+              <div class="info__tab tab" data-id="info-tab-7">Гарантия</div>
+            </div>
+            <div class="info__content-box">
+              <div class="info__content tab-content" id="info-tab-1">
+
+              </div>
+              <div class="info__content tab-content" id="info-tab-2">
+                content2
+              </div>
+              <div class="info__content tab-content" id="info-tab-3">
+                content3
+              </div>
+              <div class="info__content tab-content tab-content--active" id="info-tab-4">
+                <form class="info__form">
+                  <label class="info__label">Магазин
+                    <span class="info__input-wrapper">
+                      <input class="info__input" type="search" placeholder="|">
+                      <button class="info__search-btn" type="submit"></button>
+                    </span>
+                  </label>
+                  <div class="info__buttons">
+                    <label class="check">
+                      <input class="check__btn" type="radio" name="new">
+                      <span class="check__text radio">Забрать сегодня</span>
+                    </label>
+                    <label class="check">
+                      <input class="check__btn" type="radio" name="new">
+                      <span class="check__text radio">Забрать в течение недели</span>
+                    </label>
+                  </div>
+                </form>
+                <ul class="info__inner">
+                  <li class="info__line info__line--title">
+                    <div class="info__address">Адрес</div>
+                    <div class="info__working-hours">Режим работы</div>
+                    <div class="info__available">Доступно</div>
+                    <div class="info__num">Количество</div>
+                    <div class="info__btn"></div>
+                  </li>
+                  <li class="info__line">
+                    <div class="info__address">Москва, ул. Науки 25</div>
+                    <div class="info__working-hours">
+                      <div class="info__row">
+                        <div class="info__day">пн-сб:</div>
+                        <div class="info__time">08:00-19:00</div>
+                      </div>
+                      <div class="info__row">
+                        <div class="info__day">вс:</div>
+                        <div class="info__time">09:00-17:00</div>
+                      </div>
+                    </div>
+                    <div class="info__available">В наличии</div>
+                    <div class="info__num">1</div>
+                    <div class="info__btn">
+                      <button class="info__buy-btn">купить</button>
+                    </div>
+                  </li>
+                  <li class="info__line">
+                    <div class="info__address">Москва, ул.  Южная 134</div>
+                    <div class="info__working-hours">
+                      <div class="info__row">
+                        <div class="info__day">пн-сб:</div>
+                        <div class="info__time">08:00-19:00</div>
+                      </div>
+                      <div class="info__row">
+                        <div class="info__day">вс:</div>
+                        <div class="info__time">09:00-17:00</div>
+                      </div>
+                    </div>
+                    <div class="info__available">В наличии</div>
+                    <div class="info__num">1</div>
+                    <div class="info__btn">
+                      <button class="info__buy-btn">купить</button>
+                    </div>
+                  </li>
+                  <li class="info__line">
+                    <div class="info__address">Санкт-Петербург, ул. Красная 19</div>
+                    <div class="info__working-hours">
+                      <div class="info__row">
+                        <div class="info__day">пн-сб:</div>
+                        <div class="info__time">08:00-19:00</div>
+                      </div>
+                      <div class="info__row">
+                        <div class="info__day">вс:</div>
+                        <div class="info__time">09:00-17:00</div>
+                      </div>
+                    </div>
+                    <div class="info__available">Нет в наличии</div>
+                    <div class="info__num">1</div>
+                    <div class="info__btn">
+                      <button class="info__buy-btn">купить</button>
+                    </div>
+                  </li>
+                  <li class="info__line">
+                    <div class="info__address">Киев, ул Шевченко 167</div>
+                    <div class="info__working-hours">
+                      <div class="info__row">
+                        <div class="info__day">пн-сб:</div>
+                        <div class="info__time">08:00-19:00</div>
+                      </div>
+                      <div class="info__row">
+                        <div class="info__day">вс:</div>
+                        <div class="info__time">09:00-17:00</div>
+                      </div>
+                    </div>
+                    <div class="info__available">Нет в наличии</div>
+                    <div class="info__num">1</div>
+                    <div class="info__btn">
+                      <button class="info__buy-btn">купить</button>
+                    </div>
+                  </li>
+
+
+                </ul>
+              </div>
+              <div class="info__content tab-content" id="info-tab-5">
+                content5
+              </div>
+              <div class="info__content tab-content" id="info-tab-6">
+                content6
+              </div>
+              <div class="info__content tab-content" id="info-tab-7">
+                content7
+              </div>
+            </div>
+
           </div>
         </section>
 
