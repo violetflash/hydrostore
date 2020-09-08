@@ -1792,7 +1792,7 @@
     font-size: 20px;
     line-height: 24px;
     opacity: 1;
-    border-bottom: 1px solid $accent;
+    border-bottom: 2px solid $accent;
   }
 
   &__line {
@@ -1802,9 +1802,18 @@
     border-bottom: 1px solid rgba(47, 48, 53, .1);
   }
 
-  &__row {
+  &__row-left,
+  &__row-right, {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  &__row-left {
+    padding-right: 15px;
+  }
+  &__row-right {
+    max-width: 30%;
+    width: 100%;
   }
 
   &__specification {
@@ -1823,6 +1832,7 @@
     line-height: 17px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    border-radius: 3px;
   }
 
 }
