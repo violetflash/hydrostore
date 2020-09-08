@@ -441,8 +441,6 @@
   &__item {
     flex-basis: calc(33.333% - 30px);
     display: flex;
-    //height: 130px;
-    //align-items: center;
     border: 1px solid #CDCDCD;
     border-radius: 3px;
     margin-bottom: 30px;
@@ -1101,9 +1099,38 @@
 }
 /* CATALOG END */
 
+.show-more,
+.hide-more {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  @extend %sf-regular;
+  color: $accent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px solid $accent;
+  background-color: transparent;
+  margin: 20px 0 10px;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__content {
+    display: none;
+  }
+}
+
+.hide-more {
+  color: $gray;
+  border-color: $gray;
+}
+
 /* FILTERS START */
 .filters {
   max-width: 291px;
+  width: 100%;
   margin-right: 9px;
 
   &__tab-box {
@@ -1262,15 +1289,13 @@
       display: none;
     }
     &.opened {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: block;
     }
 
     &.new-items {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      .filters__btn-wrapper {
+        flex-wrap: nowrap;
+      }
       .filters__btn-box {
         width: unset;
       }
@@ -1348,6 +1373,12 @@
         background-color: $basic;
       }
     }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__btn-box {
@@ -1492,6 +1523,10 @@
     }
   }
 
+  .show-more {
+    margin-top: 10px;
+  }
+
   &__search-btn {
     width: 100%;
     margin-top: 10px;
@@ -1578,24 +1613,7 @@
     }
   }
 
-  &__more-wrapper {
-    width: 100%;
-    //text-align: left;
 
-  }
-
-  &__more {
-    @extend %sf-regular;
-    font-size: 14px;
-    line-height: 17px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: $accent;
-    @include focus;
-    padding: 0;
-    border-bottom: 1px solid $accent;
-  }
 
   &__send {
     padding: 15px;
@@ -1664,6 +1682,8 @@
     width: 500px;
     height: 375px;
     overflow: hidden;
+    margin: 64px 0 26px;
+
   }
 
   &__img {
@@ -1753,6 +1773,7 @@
 
   &__tab-box {
     display: flex;
+    margin-bottom: 10px;
   }
 
   &__tab {
@@ -1763,7 +1784,6 @@
     line-height: 24px;
     opacity: 0.6;
     cursor: pointer;
-    margin-bottom: 25px;
   }
 
   .tab--active {
@@ -1779,9 +1799,7 @@
     padding: 15px 0 6px;
     display: flex;
     justify-content: space-between;
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba(47, 48, 53, .1);
-    }
+    border-bottom: 1px solid rgba(47, 48, 53, .1);
   }
 
   &__row {
@@ -1789,16 +1807,8 @@
     line-height: 24px;
   }
 
-  &__more {
-    font-size: 14px;
-    line-height: 17px;
-    @extend %sf-regular;
-    color: $accent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    border-bottom: 1px solid $accent;
-    background-color: transparent;
+  &__specification {
+
   }
 
   &__buy {

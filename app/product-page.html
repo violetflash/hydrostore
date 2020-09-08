@@ -91,9 +91,9 @@
                 </div>
                 <div class="card__popularity">
                   <button class="favorite"></button>
-                  <div class="card__comparsion">
+                  <a class="card__comparsion" href="#">
                     <img class="card__compare-icon" src="images/icons/comparsion.svg" alt="comparsion icon image">
-                  </div>
+                  </a>
                   <div class="card__rating"></div>
 
                 </div>
@@ -125,10 +125,35 @@
                           <div class="card__row">Год выпуска</div>
                           <div class="card__row">2018</div>
                         </li>
-                        <li class="card__line">
-                          <button class="card__more">Показать еще</button>
-                        </li>
                       </ul>
+                      <button class="show-more">Показать еще</button>
+                      <div class="show-more__content">
+                        <ul class="card__specification hidden">
+                          <li class="card__line">
+                            <div class="card__row">Цвета</div>
+                            <div class="card__row">Цвет 1, Цвет 2</div>
+                          </li>
+                          <li class="card__line">
+                            <div class="card__row">Параметр 2</div>
+                            <div class="card__row">значение</div>
+                          </li>
+                          <li class="card__line">
+                            <div class="card__row">Параметр 3</div>
+                            <div class="card__row">значение</div>
+                          </li>
+                          <li class="card__line">
+                            <div class="card__row">Параметр 4</div>
+                            <div class="card__row">значение</div>
+                          </li>
+                          <li class="card__line">
+                            <div class="card__row">Параметр 5</div>
+                            <div class="card__row">значение</div>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="hide-more hidden">Скрыть подробности</button>
+
+
                     </div>
                     <div class="card__content tab-content" id="card-tab-2">
                       <ul class="card__specification">

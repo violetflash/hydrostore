@@ -97,14 +97,30 @@ $(function () {
 
     $(".js-range-slider").ionRangeSlider({
         type: "double",
+        min: 0,
+        max: 1300000,
+        from: 100000,
+        to: 500000,
+    });
+
+    $('.show-more').on('click', function () {
+        $(this).toggleClass('hidden');
+        $(this).next('.show-more__content').slideToggle();
+        $(this).siblings('.hide-more').toggleClass('hidden')
+    });
+
+    $('.hide-more').on('click', function () {
+        $(this).toggleClass('hidden');
+        $(this).prev('.show-more__content').slideToggle();
+        $(this).siblings('.show-more').toggleClass('hidden')
     });
 
     $('.filters__custom').styler();
 
     try {
         var mixer = mixitup('.catalog__products');
+    } catch {
     }
-    catch {}
 
     $('.card__rating').rateYo({
         starWidth: "23px",
@@ -113,8 +129,6 @@ $(function () {
         spacing: "7px",
         readOnly: true
     });
-
-
 
 
 });
