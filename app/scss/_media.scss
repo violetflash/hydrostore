@@ -38,7 +38,8 @@
     }
 
     &__list--mobile {
-
+      overflow: auto;
+      white-space: nowrap;
       display: block;
     }
   }
@@ -46,14 +47,40 @@
 
 @media (max-width: 780px) {
   .header {
-    &__address {
-      display: none;
+    &__top-inner {
+      padding: 10px 0;
     }
+
+    &__address {
+      width: unset;
+      padding-right: 10px;
+    }
+  }
+
+  .menu-mobile {
+    top: 101px;
   }
 }
 
 @media (max-width: 576px) {
+  .header{
+    &__address {
+      display: none;
+    }
 
+    &__logo-mobile {
+      display: block;
+      padding-left: 15px;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+
+  .menu-mobile {
+    top: 58px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -62,5 +89,7 @@
 
 
 @media (min-width: 993px) {
-
+  .menu-mobile {
+    display: none;
+  }
 }

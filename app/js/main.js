@@ -1,4 +1,10 @@
 $(function () {
+
+    $('.header__btn').on('click', function () {
+        $('.header__btn').toggleClass('active');
+        $('.menu-mobile').toggleClass('active')
+    });
+
     $('.promo-section__slider').slick({
         dots: true,
         speed: 800,

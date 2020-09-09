@@ -20,17 +20,71 @@
     line-height: 24px;
     padding: 25px 15px 21px;
     &--mobile {
+      padding: 14px 15px;
       background-color: #f0f0f4;
-
       display: none;
+      overflow: scroll;
     }
   }
 
   &__btn {
     background-color: transparent;
-    border: none;
     padding: 0;
+    width: 39px;
+    height: 38px;
     display: none;
+    border-radius: 50%;
+
+    position: relative;
+    border: 3px solid transparent;
+    transition: all .4s;
+
+    &.active {
+      border: 3px solid $basic;
+      width: 39px;
+      height: 38px;
+      .header__btn-line-2 {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .header__btn-line-1 {
+        top: 50%;
+        transform: rotate(315deg) translateY(-50%);
+
+      }
+      .header__btn-line-3 {
+        top: 43%;
+        transform: rotate(-315deg) translateY(50%);
+      }
+    }
+  }
+
+  &__btn-line {
+    position: absolute;
+    width: 34px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $basic;
+    transform: rotate(0deg);
+    opacity: 1;
+    visibility: visible;
+    @include focus;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn-line-1 {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  &__btn-line-2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__btn-line-3 {
+    bottom: 0;
   }
 
   &__item {
@@ -47,6 +101,10 @@
     &:hover {
       color: $accent;
     }
+  }
+
+  &__logo-mobile {
+    display: none;
   }
 
   &__box {
@@ -167,6 +225,43 @@
     }
   }
 }
+
+.menu-mobile {
+  position: absolute;
+  top: 127px;
+  left: 0;
+  width: 243px;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+  transition: all .4s;
+  height: 100%;
+  overflow-y: scroll;
+  border-radius: 0 10px;
+  &__item {
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: 23px 0 23px 43px;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+
 
 
 /* PROMO-SECTION START */
@@ -2011,12 +2106,6 @@
     }
   }
 
-
-
-  &__text {
-
-  }
-
   &__address {
     max-width: 190px;
     width: 100%;
@@ -2084,6 +2173,7 @@
 }
 /* INFO END */
 /* PRODUCT PAGE END */
+
 
 
 /* ALL OF DESKTOP STYLES ENDS HERE */
