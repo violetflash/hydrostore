@@ -1,0 +1,66 @@
+@media (max-width: 1200px) {
+  .header {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    &__link {
+      font-size: 17px;
+    }
+    &__address {
+      margin-right: 20px;
+      font-size: 17px;
+    }
+
+
+
+    &__category-link {
+      font-size: 17px;
+      padding: 17px 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    &__btn {
+      display: block;
+    }
+
+    &__category-list {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__list--mobile {
+
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    &__address {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
+
+
+@media (min-width: 993px) {
+
+}

@@ -105,13 +105,13 @@ $(function () {
 
     $('.show-more').on('click', function () {
         $(this).toggleClass('hidden');
-        $(this).next('.show-more__content').slideToggle();
+        $(this).siblings('.show-more__content').slideToggle();
         $(this).siblings('.hide-more').toggleClass('hidden')
     });
 
     $('.hide-more').on('click', function () {
         $(this).toggleClass('hidden');
-        $(this).prev('.show-more__content').slideToggle();
+        $(this).siblings('.show-more__content').slideToggle();
         $(this).siblings('.show-more').toggleClass('hidden')
     });
 
