@@ -21,6 +21,19 @@
       padding: 17px 20px;
     }
   }
+
+  .promo-section {
+    &__slider {
+      max-width: 660px;
+      margin-right: 0;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+    }
+
+  }
 }
 
 @media (max-width: 992px) {
@@ -42,6 +55,30 @@
       white-space: nowrap;
       display: block;
     }
+
+    &__bottom {
+      margin-bottom: 25px;
+    }
+
+  }
+
+  .promo-section {
+    &--mobile {
+      display: block;
+    }
+    &__inner{
+      display: block;
+    }
+
+    &__slider {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+
+    &__banner {
+      margin: 0 auto;
+    }
+
   }
 }
 
@@ -60,10 +97,34 @@
   .menu-mobile {
     top: 101px;
   }
+
+  .promo-section {
+    &__inner{
+      display: block;
+    }
+
+    &__slider {
+      max-width: 100%;
+    }
+
+    &__slide {
+      height: 300px;
+    }
+  }
+
+  .search {
+
+    &__tabs-box {
+      flex-wrap: nowrap;
+      overflow: auto;
+      white-space: nowrap;
+    }
+  }
 }
 
 @media (max-width: 576px) {
   .header{
+
     &__address {
       display: none;
     }
@@ -81,10 +142,84 @@
   .menu-mobile {
     top: 58px;
   }
+
+  .promo-section {
+
+    .container {
+      padding: 0;
+    }
+
+    &__slide {
+      height: 200px;
+    }
+
+    .promo-section__image {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .search {
+
+    .tab {
+      padding: 0;
+      border-bottom: 2px solid transparent;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    .tab--active {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 0;
+      border-bottom: 2px solid $accent;
+      text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+    }
+
+    &__input {
+      max-width: 100%;
+      &::placeholder {
+        color: $basic;
+      }
+    }
+
+    &__btn {
+      font-size: 0;
+      padding: 0;
+      margin-left: -55px;
+      border-radius: 0;
+      line-height: 0;
+      letter-spacing: 0;
+      text-transform: unset;
+      color: #FFF;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: none;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        background-image: url('../images/icons/magnifier-search.svg');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {
+  .promo-section {
 
+    &__slide {
+      height: 164px;
+    }
+  }
 }
 
 
