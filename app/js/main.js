@@ -29,8 +29,53 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 2,
         // adaptiveHeight: true,
-        autoplay: true,
+        // autoplay: true,
         speed: 800,
+        responsive: [
+            {
+                breakpoint: 1301,
+                settings: {
+                    arrows: false,
+                    dots: true,
+
+                }
+            },
+            {
+                breakpoint: 1201,
+                settings: {
+                    arrows: false,
+                    dots: true,
+
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
 
 

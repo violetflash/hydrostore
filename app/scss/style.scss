@@ -679,13 +679,44 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -35px;
+    left: -12px;
     cursor: pointer;
     outline: transparent;
     &--right {
-      right: -25px;
+      right: -42px;
       left: unset;
     }
+  }
+
+  .slick-dots {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: -34px;
+
+    li {
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+    button {
+      padding: 0;
+      margin: 0;
+      background-color: $gray;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      font-size: 0;
+      @include focus;
+    }
+  }
+
+  .slick-active > button {
+    background-color: $accent;
+    border: 1px solid transparent;
+
   }
   //
   //.slick-track {
@@ -706,7 +737,10 @@
     background-color: #F0F0F4;
     margin-top: 35px;
     @include focus;
+  }
 
+  &__slider {
+    margin-left: -30px;
   }
 }
 /* PRODUCTS END */
@@ -722,7 +756,7 @@
   height: 403px;
   padding: 52px 20px 25px;
   position: relative;
-  margin-right: 30px;
+  margin-left: 30px;
 
   &:hover {
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
@@ -896,6 +930,13 @@
 
 .banner {
   margin-bottom: 72px;
+
+  &__image {
+    width: 100%;
+    &--mobile {
+      display: none;
+    }
+  }
 }
 
 /* FOOTER START */
