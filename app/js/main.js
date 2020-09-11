@@ -189,5 +189,9 @@ $(function () {
         spacing: "7px"
     });
 
+    $('.footer__title--mobile').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next('.footer__list').slideToggle()
+    })
 
 });

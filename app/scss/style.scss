@@ -959,6 +959,14 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
+    &--mobile {
+      display: none;
+      .footer__list {
+        display: none;
+        padding: 0 8px 16px;
+      }
+    }
   }
 
   &__title {
@@ -1100,6 +1108,10 @@
     margin-bottom: 47px;
   }
 
+  &__tags {
+    margin-right: 30px;
+  }
+
   &__tag {
     padding: 4px 28px;
     background: #F0F0F4;
@@ -1182,6 +1194,17 @@
     display: flex;
   }
 
+  &__filters-btn {
+    height: 100%;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    background-color: $gray;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+  }
+
   &__content {
     max-width: 870px;
     width: 100%;
@@ -1262,9 +1285,6 @@
     margin-left: 30px;
   }
 
-  &__link {
-
-  }
 }
 /* CATALOG END */
 
