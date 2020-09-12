@@ -23,6 +23,7 @@ $(function () {
         ]
     });
 
+
     $('.products__slider').slick({
         prevArrow: '<button class="products__arrow"><img src="../images/icons/left-arrow-black.svg"></button>',
         nextArrow: '<button class="products__arrow products__arrow--right"><img src="../images/icons/right-arrow-black.svg"></button>',
@@ -94,6 +95,9 @@ $(function () {
         $($(this).parent().siblings().find('div')).removeClass('tab-content--active');
         $(this).addClass('tab--active');
         $('#' + id).addClass('tab-content--active') //добавляем класс по полученному значению атрибута
+
+        $('.products__slider').slick('setPosition');
+
     });
 
     $('.favorite').on('click', function () {
@@ -192,6 +196,12 @@ $(function () {
     $('.footer__title--mobile').on('click', function () {
         $(this).toggleClass('active');
         $(this).next('.footer__list').slideToggle()
+    });
+
+    $('.catalog__filters-btn').on('click', function () {
+        $(this).toggleClass('active').siblings('.filters').slideToggle();
     })
+
+
 
 });
